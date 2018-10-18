@@ -1,0 +1,3 @@
+place one of these csv's in the same directory as the executable or script
+change the csv file name to 'input.csv' so the script/executable reads the file
+run script/executable to get solution
