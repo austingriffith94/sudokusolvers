@@ -11,7 +11,7 @@ The second iteration of the solver utilized the same recursive methods as the nu
 A new method was introduced in this next script. It involves solving the puzzle much like a person would. Each cell is part of a row and column. The method uses the cell's row column information to determine which values are possible. If there is only one possible value, then this is the correct value. That cell is changed to the singular value, and the new puzzle has the possible values updated. This is repeated until no more new cells can be solved. Once this method is exhausted, the brute force solver is implemented to finish the puzzle. This significantly reduces the complexity of the given puzzle. Therefore, even if the reduction method doesn't completely solve the puzzle, it can drastically reduce the time for the brute force method. For simpler puzzles, completion times dropped by an order of magnitude. For the most difficult puzzles available, the time was reduced from 20+ to 18 seconds. Similar to the backtrack script, it utilizes only built in python packages and data structures.
 
 ## Time Measurements
-The time to solve is the most important feature of the solver, outside of it being able to solve the puzzle correctly. In order to get an idea of how these scripts performed, they were modified to suppress output, and then tested on a series of puzzles. For the first round, they were tested on XXXX easy to normal difficulty puzzles, randomly sampled from a list of 1 million sudokus. This file can be found on Kaggle, [here.]{https://www.kaggle.com/bryanpark/sudoku} The solvers' time to complete were measured. You can see the results below.
+The time to solve is the most important feature of the solver, outside of it being able to solve the puzzle correctly. In order to get an idea of how these scripts performed, they were modified to suppress output, and then tested on a series of puzzles. For the first round, they were tested on XXXX easy to normal difficulty puzzles, randomly sampled from a list of 1 million sudokus. This file can be found on Kaggle, [here.](https://www.kaggle.com/bryanpark/sudoku) The solvers' time to complete were measured. You can see the results below.
 
 ![Backtrack Numpy](https://github.com/austingriffith94/sudokusolvers/blob/master/timetest/backnp.png "Backtrack Numpy")
 
@@ -19,3 +19,8 @@ The time to solve is the most important feature of the solver, outside of it bei
 
 ![Reduction](https://github.com/austingriffith94/sudokusolvers/blob/master/timetest/reduction.png "Reduction")
 
+As you can see from the distributions, each refinement of the method leads to an order of magnitude decrease in computation time. The average time to completion are as follows:
+
+    Reduction       : 0.00228 s
+    Backtrack       : 0.00848 s
+    Backtrack Numpy : 0.14555 s
